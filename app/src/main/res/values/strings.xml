@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tv_test1">测试文本很长很长666</string>
+    <string name="edit_text">编辑</string>
+    <string name="radio_button">单选</string>
+    <string name="check_box">复选</string>
+    <string name="image_view">ImageView</string>
+    <string name="list_view">ListView</string>
+    <string name="grid_view">GridView</string>
+    <string name="recycler_view">RecyclerView</string>
+    <string name="web_view">WebView</string>
+    <string name="toast">Toast</string>
+    <string name="dialog">Dialog</string>
+    <string name="progress">Progress</string>
+    <string name="custom_dialog">CustomDialog</string>
+    <string name="popup_window">PopUpWindow</string>
+</resources>
