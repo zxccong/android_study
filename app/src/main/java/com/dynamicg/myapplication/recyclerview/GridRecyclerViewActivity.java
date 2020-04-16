@@ -1,4 +1,4 @@
-package com.dynamicg.recyclerview;
+package com.dynamicg.myapplication.recyclerview;
 
 import android.os.Bundle;
 import android.widget.Toast;

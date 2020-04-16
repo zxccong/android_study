@@ -1,4 +1,4 @@
-package com.dynamicg.recyclerview;
+package com.dynamicg.myapplication.recyclerview;
 
 import android.content.Context;
 import androidx.annotation.NonNull;

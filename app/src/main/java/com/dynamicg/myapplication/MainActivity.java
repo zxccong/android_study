@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.dynamicg.myapplication.gridview.GridViewActivity;
 import com.dynamicg.myapplication.listview.ListViewActivity;
+import com.dynamicg.myapplication.recyclerview.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,6 +98,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳转到GridView界面
                 Intent intent = new Intent(MainActivity.this, GridViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnRecyclerView = findViewById(R.id.btn_recycler_view);
+        btnRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到RecyclerView界面
+                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnWebView = findViewById(R.id.btn_web_view);
+        btnWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到WebView界面
+                Intent intent = new Intent(MainActivity.this,WebViewActivity.class);
                 startActivity(intent);
             }
         });

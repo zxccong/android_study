@@ -1,4 +1,4 @@
-package com.dynamicg.recyclerview;
+package com.dynamicg.myapplication.recyclerview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,28 +11,28 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dynamicg.myapplication.R;
 
-public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder> {
+public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHolder> {
 
     private Context context;
     private OnItemClickListener clickListener;
 
 
-    public HorAdapter(Context context, OnItemClickListener listener){
+    public GridAdapter(Context context, OnItemClickListener listener){
         this.context = context;
         this.clickListener = listener;
 
     }
     @NonNull
     @Override
-    public HorAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        //返回的是RecyclerView单项item的布局
-        return new LinearViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_hor_item,viewGroup,false));
+    public GridAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        //返回的是GridRecyclerView单项item的布局
+        return new LinearViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_grid_recycler_item,viewGroup,false));
     }
 
     //给viewHolder中控件textView进行赋值
     @Override
-    public void onBindViewHolder(@NonNull HorAdapter.LinearViewHolder viewHolder, final int position) {
-        viewHolder.textView.setText("lsq");
+    public void onBindViewHolder(@NonNull GridAdapter.LinearViewHolder viewHolder, final int position) {
+        viewHolder.textView.setText("Hello");
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +44,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
 
     @Override
     public int getItemCount() {
-        return 20;
+        return 60;
     }
 
     //自定义内部类LinearViewHolder

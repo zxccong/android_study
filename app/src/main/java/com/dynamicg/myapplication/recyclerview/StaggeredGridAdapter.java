@@ -1,38 +1,41 @@
-package com.dynamicg.recyclerview;
+package com.dynamicg.myapplication.recyclerview;
 
 import android.content.Context;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import android.widget.ImageView;
 
 import com.dynamicg.myapplication.R;
 
-public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHolder> {
+public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdapter.LinearViewHolder> {
 
     private Context context;
     private OnItemClickListener clickListener;
 
 
-    public GridAdapter(Context context, OnItemClickListener listener){
+    public StaggeredGridAdapter(Context context, OnItemClickListener listener){
         this.context = context;
         this.clickListener = listener;
 
     }
     @NonNull
     @Override
-    public GridAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+    public StaggeredGridAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         //返回的是GridRecyclerView单项item的布局
-        return new LinearViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_grid_recycler_item,viewGroup,false));
+        return new LinearViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_staggered_grid_recycler_item,viewGroup,false));
     }
 
     //给viewHolder中控件textView进行赋值
     @Override
-    public void onBindViewHolder(@NonNull GridAdapter.LinearViewHolder viewHolder, final int position) {
-        viewHolder.textView.setText("Hello");
+    public void onBindViewHolder(@NonNull StaggeredGridAdapter.LinearViewHolder viewHolder, final int position) {
+        if(position % 2 != 0){
+            viewHolder.imageView.setImageResource(R.drawable.image1);
+        }else {
+            viewHolder.imageView.setImageResource(R.drawable.image2);
+        }
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,17 +47,17 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHold
 
     @Override
     public int getItemCount() {
-        return 60;
+        return 30;
     }
 
     //自定义内部类LinearViewHolder
     class LinearViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView textView;
+        private ImageView imageView;
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.tv_title);
+            imageView = itemView.findViewById(R.id.iv);
         }
     }
 
