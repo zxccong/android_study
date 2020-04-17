@@ -121,6 +121,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button btnToast = findViewById(R.id.btn_toast);
+        btnToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到Toast界面
+                Intent intent = new Intent(MainActivity.this,ToastActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
