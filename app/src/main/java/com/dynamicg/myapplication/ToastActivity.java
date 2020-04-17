@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dynamicg.myapplication.util.ToastUtil;
+
 public class ToastActivity extends AppCompatActivity {
 
     @Override
@@ -49,6 +51,7 @@ public class ToastActivity extends AppCompatActivity {
                     textView.setText("自定义Toast");
                     toastCustom.setView(view);
                     toastCustom.setDuration(Toast.LENGTH_LONG);
+                    toastCustom.cancel();
                     toastCustom.show();
                     break;
                 case R.id.btn_toast4:
