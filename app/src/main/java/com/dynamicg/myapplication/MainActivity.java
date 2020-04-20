@@ -130,6 +130,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnDialog = findViewById(R.id.btn_dialog);
+        btnDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到Dialog界面
+                Intent intent = new Intent(MainActivity.this,DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnProgress = findViewById(R.id.btn_progress);
+        btnProgress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到Progress界面
+                Intent intent = new Intent(MainActivity.this,ProgressActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
