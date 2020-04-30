@@ -7,7 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.dynamicg.myapplication.fragment.ContainActivity;
 import com.dynamicg.myapplication.gridview.GridViewActivity;
+import com.dynamicg.myapplication.jump.AActivity;
 import com.dynamicg.myapplication.listview.ListViewActivity;
 import com.dynamicg.myapplication.recyclerview.RecyclerViewActivity;
 
@@ -147,6 +149,56 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳转到Progress界面
                 Intent intent = new Intent(MainActivity.this,ProgressActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnCustomDialog = findViewById(R.id.btn_custom_dialog);
+        btnCustomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到CustomDialog界面
+                Intent intent = new Intent(MainActivity.this,CustomDialogActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnPopUpWindow = findViewById(R.id.btn_pop_up_window);
+        btnPopUpWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到PopUpWindow界面
+                Intent intent = new Intent(MainActivity.this,PopUpWindowActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnLifeCycle = findViewById(R.id.btn_lifecycle);
+        btnLifeCycle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到LifeCycle演示界面
+                Intent intent = new Intent(MainActivity.this,LifeCycleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnJump = findViewById(R.id.btn_jump);
+        btnJump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到LifeCycle演示界面
+                Intent intent = new Intent(MainActivity.this, AActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnFragment = findViewById(R.id.btn_fragment);
+        btnJump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到Fragment演示界面
+                Intent intent = new Intent(MainActivity.this, ContainActivity.class);
                 startActivity(intent);
             }
         });

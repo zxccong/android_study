@@ -11,7 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".fragment.ContainActivity"></activity>
+        <activity
+            android:name=".jump.BActivity"
+            android:label="A"
+            android:launchMode="standard" />
+        <activity
+            android:name=".jump.AActivity"
+            android:label="B"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="com.dynamicg.myapplication.jump.BActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LifeCycleActivity" />
+        <activity android:name=".PopUpWindowActivity" />
+        <activity android:name=".CustomDialogActivity" />
+        <activity android:name=".ProgressActivity" />
         <activity android:name=".DialogActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".WebViewActivity" />
